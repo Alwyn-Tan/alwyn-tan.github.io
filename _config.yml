@@ -1,5 +1,4 @@
-name: "Pianfan's blog"
-description: "翩帆的个人技术博客"
+name: "Alwyn Tan's blog"
 
 avatar: https://pianfan.github.io/images/avatar.png
 favicon: https://pianfan.github.io/images/favicon.ico
@@ -17,17 +16,17 @@ paginate: 8
 excerpt_separator: <!-- more -->
 
 footer-links:
-  zhihu: 
-  email: xiongyunhan@outlook.com
+  zhihu:
+  email: alwyn-s-x-tan@163.com
   facebook:
-  github: pianfan
+  github: Alwyn-Tan
   rss: # just type anything here for a working RSS icon
-  twitter: 
+  twitter:
   youtube:
 
 footer-text: Copyright (c) 2024 Pianfan
 
-url: https://pianfan.github.io
+url: https://alwyn-tan.github.io
 
 permalink: /:title/
 paginate_path: /page:num/
@@ -43,7 +42,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+    css_class: "highlight"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
@@ -61,4 +60,3 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-
