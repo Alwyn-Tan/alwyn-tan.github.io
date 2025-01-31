@@ -27,7 +27,7 @@ To configure it, use SAVE or BGSAVE like this:
 `save 60 1000`
 #### RDB pros and cons
 <div style="border: 2px solid #43CD80; margin: 10px 0; padding: 5px; border-radius: 15px; background-color: #9AFF9A">
-RDB Advantage:
+RDB Advantage:<br>
 
 ● RDB is a very compatct single-file point-in-time representation of Redis data, which is perfect for backups. Allowing you to easily restore different version of the dataset in case of disasters.<br>  
 
@@ -35,7 +35,7 @@ RDB Advantage:
 </div>
 
 <div style="border: 2px solid #CD2626; padding:5px;margin: 10px 0;border-radius: 15px; background-color: #FF7256">
-RDB Disadvantage:
+RDB Disadvantage:<br>
 
 ●  Will lose latest data, so it is NOT good if you need to minimize the chance of data loss  
 
@@ -48,19 +48,19 @@ To compact AOF, Redis is able to rebuild the AOF in the background without inter
 When *bgrewriteaof* is issued, Redis will write the shortest sequence of commands needed to rebuild the current dataset.
 #### AOF pros and cons
 <div style="border: 2px solid #43CD80; margin: 10px 0; padding: 5px; border-radius: 15px; background-color: #9AFF9A">
-AOF Advantage:
+AOF Advantage:<br>
 
-●  AOF is much more durable: different fsync policies are provided: no fsync, every second and every query. So is can save the data with high integrity.
+●  AOF is much more durable: different fsync policies are provided: no fsync, every second and every query. So is can save the data with high integrity.<br>
 
-●  AOF rewriting is performed by child process *bgrewriteaof*, letting parent goes well.
+●  AOF rewriting is performed by child process *bgrewriteaof*, letting parent goes well.<br>
 
 ●  AOF records Redis operation so it is easier to understand exactly how the data is manipulated.
 </div>
 
 <div style="border: 2px solid #CD2626; padding:5px;margin: 10px 0;border-radius: 15px; background-color: #FF7256">
-AOF Disadvantage:
+AOF Disadvantage:<br>
 
-●  Usually bigger than the equivalent RDB file
+●  Usually bigger than the equivalent RDB file<br>
 
 ●  Fork can be time consuming when the dataset is too big
 </div>
