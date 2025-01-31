@@ -14,6 +14,8 @@ author: Alwyn Tan
   - [AOF](#aof)
     - [AOF rewriting](#aof-rewriting)
     - [AOF pros and cons](#aof-pros-and-cons)
+- [Expiration Algorithm](#expiration-algorithm)
+  - [Expiring Commands](#expiring-commands)
 
 
 ## Redis presistence
@@ -62,3 +64,32 @@ AOF Disadvantage:
 
 ●  Fork can be time consuming when the dataset is too big
 </div>
+
+## Expiration Algorithm
+### Expiring Commands
+```
+PRESIST # Removes the expiration
+TTL / PTTL # Returns the amount of time remaining time
+EXPIRE / PEXPIRE # Sets the key to expire in the given time
+EXPIREAT / PEXPIREAT # Exact expiration timestamp
+```
+We can see that Redis keys are expired in two ways:
+
+● **Passive way:**  Redis checks whether a key is expired when it is accessed, and then the expired key will be deleted.
+
+● **Active way:** Redis periodically tests a few keys by random sampling among keys with an expired set.
+
+<div style="border: 2px solid #00868B; margin: 10px 0; padding: 5px; border-radius: 15px; background-color: #00E5EE">
+But the passive way will make expired key fewer and fewer, which means we do resource-intensive operation while do not produce a relevant number of evictions.
+
+Because of this, the random sampling algorithm would stop as a threshold of 25%.
+
+In addition, to further improve memory usability, if a sample is about to expire, it will be stored in a radix tree. Then the sampling iteration will begin from the radix to delete keys that are more likely to expire first
+</div>
+
+
+
+
+
+
+
