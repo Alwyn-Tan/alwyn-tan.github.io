@@ -29,7 +29,7 @@ To configure it, use SAVE or BGSAVE like this:
 <div style="border: 2px solid #43CD80; margin: 10px 0; padding: 5px; border-radius: 15px; background-color: #9AFF9A">
 RDB Advantage:
 
-● RDB is a very compatct single-file point-in-time representation of Redis data, which is perfect for backups. Allowing you to easily restore different version of the dataset in case of disasters.
+● RDB is a very compatct single-file point-in-time representation of Redis data, which is perfect for backups. Allowing you to easily restore different version of the dataset in case of disasters.  
 
 ● Good performances and faster restarts with big datasets compared to AOF.
 </div>
@@ -37,7 +37,7 @@ RDB Advantage:
 <div style="border: 2px solid #CD2626; padding:5px;margin: 10px 0;border-radius: 15px; background-color: #FF7256">
 RDB Disadvantage:
 
-●  Will lose latest data, so it is NOT good if you need to minimize the chance of data loss
+●  Will lose latest data, so it is NOT good if you need to minimize the chance of data loss  
 
 ●  Fork can be time consuming when the dataset is too big
 </div>
