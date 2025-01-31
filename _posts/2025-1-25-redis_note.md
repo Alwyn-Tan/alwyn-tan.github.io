@@ -29,7 +29,7 @@ To configure it, use SAVE or BGSAVE like this:
 <div style="border: 2px solid #43CD80; margin: 10px 0; padding: 5px; border-radius: 15px; background-color: #9AFF9A">
 RDB Advantage:
 
-● RDB is a very compatct single-file point-in-time representation of Redis data, which is perfect for backups. Allowing you to easily restore different version of the dataset in case of disasters.  
+● RDB is a very compatct single-file point-in-time representation of Redis data, which is perfect for backups. Allowing you to easily restore different version of the dataset in case of disasters.<br>  
 
 ● Good performances and faster restarts with big datasets compared to AOF.
 </div>
@@ -80,9 +80,9 @@ We can see that Redis keys are expired in two ways:
 ● **Active way:** Redis periodically tests a few keys by random sampling among keys with an expired set.
 
 <div style="border: 2px solid #00868B; margin: 10px 0; padding: 5px; border-radius: 15px; background-color: #00E5EE">
-But the passive way will make expired key fewer and fewer, which means we do resource-intensive operation while do not produce a relevant number of evictions.
+But the passive way will make expired key fewer and fewer, which means we do resource-intensive operation while do not produce a relevant number of evictions.<br>
 
-Because of this, the random sampling algorithm would stop as a threshold of 25%.
+Because of this, the random sampling algorithm would stop as a threshold of 25%.<br>
 
 In addition, to further improve memory usability, if a sample is about to expire, it will be stored in a radix tree. Then the sampling iteration will begin from the radix to delete keys that are more likely to expire first
 </div>
