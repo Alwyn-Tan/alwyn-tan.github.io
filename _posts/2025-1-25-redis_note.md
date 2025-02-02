@@ -90,9 +90,9 @@ In addition, to further improve memory usability, if a sample is about to expire
 
 ## Eviction policy
 Redis eviction policy determines what happens when a database reaches its memory limit.<br>
-| Policy | Detail |
-| :-----:| :-----:|
-|noeviction|new value are not saved|
+| Policy | Detail |  
+| -----|-----|
+| noeviction|new value are not saved |
 |allkeys-lru|keeps most recently used keys; removes least recently used keys|
 |allkeys-lfu|keeps most frequently used keys; removes least frequently used keys|
 |allkeys-random|...|
