@@ -16,6 +16,7 @@ author: Alwyn Tan
     - [AOF pros and cons](#aof-pros-and-cons)
 - [Expiration Algorithm](#expiration-algorithm)
   - [Expiring Commands](#expiring-commands)
+- [Eviction policy](#eviction-policy)
 
 
 ## Redis presistence
@@ -37,7 +38,7 @@ RDB Advantage:<br>
 <div style="border: 2px solid #CD2626; padding:5px;margin: 10px 0;border-radius: 15px; background-color: #FF7256">
 RDB Disadvantage:<br>
 
-●  Will lose latest data, so it is NOT good if you need to minimize the chance of data loss  
+●  Will lose latest data, so it is NOT good if you need to minimize the chance of data loss<br>  
 
 ●  Fork can be time consuming when the dataset is too big
 </div>
@@ -86,6 +87,21 @@ Because of this, the random sampling algorithm would stop as a threshold of 25%.
 
 In addition, to further improve memory usability, if a sample is about to expire, it will be stored in a radix tree. Then the sampling iteration will begin from the radix to delete keys that are more likely to expire first
 </div>
+
+## Eviction policy
+Redis eviction policy determines what happens when a database reaches its memory limit.<br>
+| Policy | Detail |
+| :-----:| :-----:|
+|noeviction|new value are not saved|
+|allkeys-lru|keeps most recently used keys; removes least recently used keys|
+|allkeys-lfu|keeps most frequently used keys; removes least frequently used keys|
+|allkeys-random|...|
+|volatile-lru, volatile-lfu, volatile-lfu| keys with expire filed set to true|
+|volatile-ttl|removes LFU keys with shortest TTL value|
+
+Generally, volatile-lru is the default eviction policy for most databases.
+
+
 
 
 
