@@ -1,8 +1,7 @@
 ---
 title: 'Reading FinRobot as an Engineer: What Its Equity Research Pipeline Actually Does'
-description: 'Lorem ipsum dolor sit amet'
+description: ''
 pubDate: 'May 14 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 
 # Reading FinRobot as an Engineer: What Its Equity Research Pipeline Actually Does

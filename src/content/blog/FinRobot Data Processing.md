@@ -1,8 +1,7 @@
 ---
 title: 'Notes on FinRobot’s Data Processing Layer: In Financial Agents, the Hard Part Is Not the LLM — It Is the Data Layer'
-description: 'Lorem ipsum dolor sit amet'
+description: ''
 pubDate: 'May 13 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 
 # Notes on FinRobot’s Data Processing Layer: In Financial Agents, the Hard Part Is Not the LLM — It Is the Data Layer
